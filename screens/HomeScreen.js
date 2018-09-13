@@ -17,7 +17,34 @@ export default class HomeScreen extends React.Component {
     header: null,
   };
 
+  componentDidMount() {
+      this._getData();
+  };
+
+  _getData(){
+
+    let data = fetch('https://www.metaweather.com/api/location/890869/')
+        .then(this._handleResponse)
+        .catch((error) => {
+          console.log(error);
+        })
+
+  }
+
+
+  _handleResponse = async (response) => {
+      let responseJson = await response.json();
+      if (!response.ok) {
+          console.log('error')
+      }
+
+      console.log(responseJson);
+  }
+
   render() {
+
+
+
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
