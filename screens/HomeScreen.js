@@ -7,6 +7,8 @@ import {
   Text,
   TouchableOpacity,
   View,
+  FlatList,
+    TouchableHighlight,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -37,12 +39,10 @@ export default class HomeScreen extends React.Component {
           console.log('error')
       }
 
-      console.log(responseJson);
+      //console.log(responseJson);
   }
 
   render() {
-
-
 
     return (
       <View style={styles.container}>
@@ -59,7 +59,7 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
+            {this._RandomRender()}
 
             <Text style={styles.getStartedText}>Get started by opening</Text>
 
@@ -90,24 +90,20 @@ export default class HomeScreen extends React.Component {
     );
   }
 
-  _maybeRenderDevelopmentModeWarning() {
-    if (__DEV__) {
-      const learnMoreButton = (
-        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-          Learn more
-        </Text>
-      );
+  _RandomRender() {
+    let rand = Math.floor(Math.random() * 11);
+
+    if (rand > 4) {
 
       return (
-        <Text style={styles.developmentModeText}>
-          Development mode is enabled, your app will be slower but you can use useful development
-          tools. {learnMoreButton}
+        <Text style={styles.RandomRenderText}>
+          Denna gången blev det 5 - 10
         </Text>
       );
     } else {
       return (
-        <Text style={styles.developmentModeText}>
-          You are not in development mode, your app will run at full speed.
+        <Text style={styles.RandomRenderText}>
+          Ah tyvärr, det blev 0 - 4
         </Text>
       );
     }
@@ -122,14 +118,16 @@ export default class HomeScreen extends React.Component {
       'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
     );
   };
+
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: 50,
   },
-  developmentModeText: {
+    RandomRenderText: {
     marginBottom: 20,
     color: 'rgba(0,0,0,0.4)',
     fontSize: 14,

@@ -4,10 +4,11 @@
 
 ## EXPO-länkar
 
-  - https://docs.expo.io/versions/v30.0.0/introduction/installation
-  - https://facebook.github.io/react-native/docs/getting-started
-  - https://itunes.apple.com/us/app/expo-client/id982107779?mt=8
-  - https://play.google.com/store/apps/details?id=host.exp.exponent&hl=sv
+  - APIer https://github.com/toddmotto/public-apis
+  - Dokumentation Expo https://docs.expo.io/versions/v30.0.0/introduction/installation
+  - Dokumentation React Native https://facebook.github.io/react-native/docs/getting-started
+  - Expo för iOS https://itunes.apple.com/us/app/expo-client/id982107779?mt=8
+  - Expo för Android https://play.google.com/store/apps/details?id=host.exp.exponent&hl=sv
 
 ## Komma igång
 ##### Exempelprojetet
