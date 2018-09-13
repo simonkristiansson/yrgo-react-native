@@ -21,14 +21,13 @@ export default class HomeScreen extends React.Component {
       this._getData();
   };
 
-  _getData(){
 
+  _getData(){
     let data = fetch('https://www.metaweather.com/api/location/890869/')
         .then(this._handleResponse)
         .catch((error) => {
           console.log(error);
         })
-
   }
 
 
