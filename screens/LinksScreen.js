@@ -7,6 +7,15 @@ export default class LinksScreen extends React.Component {
     title: 'Links',
   };
 
+
+
+  componentDidMount(){
+    this.props.navigation.addListener('willFocus', payload => {
+        console.log(this.props.navigation.state.params);
+    });
+  }
+
+  component
   render() {
     return (
       <ScrollView style={styles.container}>

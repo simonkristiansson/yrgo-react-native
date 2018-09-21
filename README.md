@@ -24,6 +24,20 @@ installera Expo-klienten via npm
 ```npm install -g expo-cli```
 
 
+#### Navigering
+
+Gör en manuell navigering till en annan screen och skicka med variablar
+```this.props.navigation.navigate('Links', {customVariable: 'min variabel!!!11'});```
+
+Ta emot variablen på linksscreen
+```  componentDidMount(){
+       this.props.navigation.addListener('willFocus', payload => {
+           console.log(this.props.navigation.state.params);
+       });
+     }```
+
+
+
 
 
 
